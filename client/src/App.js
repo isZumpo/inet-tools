@@ -5,7 +5,7 @@ import axios from 'axios';
 
 class App extends Component {
     componentWillMount() {
-        axios.get('http://localhost:8080/api?cartId=10402169')
+        axios.get('http://localhost:8080/api/shoppingcart?cartId=10402169')
             .then(function (response) {
                 console.log(response.data);
             })

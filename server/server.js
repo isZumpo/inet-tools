@@ -23,7 +23,7 @@ var clientRouter = express.Router();              // get an instance of the expr
 apiRouter.use(cors({origin: 'http://localhost:3000'}));
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-apiRouter.get('/', function(req, res) {
+apiRouter.get('/shoppingcart', function(req, res) {
 
     let cartUrl = 'https://www.inet.se/kundvagn/visa/' + req.query.cartId + '/';
     request(cartUrl, function (error, response, body) {
@@ -31,14 +31,16 @@ apiRouter.get('/', function(req, res) {
             let $ = cheerio.load(response.body);
             let cart = {
                 cartURL: cartUrl,
+                totalPrice: $('.cart-sum .active-price').html(),
                 items: []
             };
-            $('.ellipsis').each(function (index) {
+            $('.cart-content .cart-item').each(function (index) {
                 let item = {};
-                item.url = $(this).attr('href');
+                item.url = $(this).find('.ellipsis').attr('href');
                 item.id = item.url.split('/')[2];
                 item.imageUrl = "inetimg.se/img/110x83/" + item.id + "_0.jpg";
-                item.title =  $(this).html();
+                item.title =  $(this).find('.ellipsis').html();
+                item.price = $(this).find('.product-price .active-price').html()
                 cart.items.push(item);
             });
             res.json(cart);
