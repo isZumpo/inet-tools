@@ -2,7 +2,8 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var request =    require('request');
-var cheerio = require('cheerio')
+var cheerio = require('cheerio');
+var path = require('path');
 
 
 // configure app to use bodyParser()
@@ -14,10 +15,11 @@ var port = process.env.PORT || 8080;        // set our port
 
 // ROUTES FOR OUR API
 // =============================================================================
-var router = express.Router();              // get an instance of the express Router
+var apiRouter = express.Router();              // get an instance of the express Router
+var clientRouter = express.Router();              // get an instance of the express Router
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-router.get('/', function(req, res) {
+apiRouter.get('/', function(req, res) {
 
     let cartUrl = 'https://www.inet.se/kundvagn/visa/' + req.query.cartId + '/';
     request(cartUrl, function (error, response, body) {
@@ -43,11 +45,24 @@ router.get('/', function(req, res) {
 
 });
 
+
+//Serve root
+clientRouter.get('/', function (req, res) {
+    // res.sendFile(__dirname , '..', 'client', 'app.css');
+    res.sendFile(path.resolve('../client/build/index.html'));
+});
+
+//Dirty way to save statics
+clientRouter.get(/^(.+)$/, function(req, res) { res.sendfile((path.resolve('../client/build/' + req.params[0])))});
+
+
+
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
-app.use('/api', router);
+app.use('/api', apiRouter);
+app.use('/', clientRouter);
 
 // START THE SERVER
 // =============================================================================

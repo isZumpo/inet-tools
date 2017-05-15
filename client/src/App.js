@@ -5,7 +5,7 @@ import axios from 'axios';
 
 class App extends Component {
     componentWillMount() {
-        axios.get('https://cors-anywhere.herokuapp.com/https://www.inet.se/api/cart/react/')
+        axios.get('http://localhost:8080/api?cartId=10402169')
             .then(function (response) {
                 console.log(response + "asdasd");
             })
@@ -22,8 +22,6 @@ class App extends Component {
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-            <iframe src="https://www.inet.se/kundvagn/visa/10402073/namnlos"></iframe>
-
         </p>
       </div>
     );
