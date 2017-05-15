@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var request =    require('request');
 var cheerio = require('cheerio');
 var path = require('path');
+var cors = require('cors');
 
 
 // configure app to use bodyParser()
@@ -17,6 +18,9 @@ var port = process.env.PORT || 8080;        // set our port
 // =============================================================================
 var apiRouter = express.Router();              // get an instance of the express Router
 var clientRouter = express.Router();              // get an instance of the express Router
+
+//Allow localhost:3000 to access api
+apiRouter.use(cors({origin: 'http://localhost:3000'}));
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 apiRouter.get('/', function(req, res) {
