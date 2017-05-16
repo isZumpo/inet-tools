@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 
+/**
+ * Inet tools basic shoppingcart checker
+ */
 class App extends Component {
 
     constructor(props) {
@@ -22,6 +25,10 @@ class App extends Component {
             });
     }
 
+    /**
+     * Handle change in input field for id or url of shoppingcart
+     * @param event Change event
+     */
     handleChange(event) {
         let id;
         //Check if id is correct
@@ -65,6 +72,10 @@ const shoppingCartStyle = {
 }
 
 
+/**
+ * A method that renders a shoppingcart containing shoppingcart items
+ * @param props Props containing a object with proper structure for a shoppingcart
+ */
 function getShoppingCart(props) {
     if(props) {
         return (<div className="shoppingcart">
@@ -74,6 +85,12 @@ function getShoppingCart(props) {
     }
 }
 
+/**
+ *
+ * A method that renders a shoppingcart item
+ * @param props Props containing a shoppingcart item object
+ * @returns {Array}
+ */
 function getShoppingItems(props) {
     if(props && props.items) {
         return props.items.map(item => (
