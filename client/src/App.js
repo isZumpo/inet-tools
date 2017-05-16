@@ -4,6 +4,12 @@ import './App.css';
 import axios from 'axios';
 
 class App extends Component {
+
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
     componentDidMount() {
         let self = this;
         axios.get('http://localhost:8080/api/shoppingcart?cartId=10402169')
@@ -16,10 +22,35 @@ class App extends Component {
             });
     }
 
+    handleChange(event) {
+        let id;
+        //Check if id is correct
+        if(!isNaN(event.target.value)) {
+            id = event.target.value;
+        } else  {
+            id = event.target.value.split("/")[5];
+            if(isNaN(id)) {
+                return;
+            }
+        }
+        let self = this;
+        axios.get('http://localhost:8080/api/shoppingcart?cartId=' + id)
+            .then(function (response) {
+                console.log(response.data);
+                self.setState(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
     render() {
         return (
             <div className="App">
                 <div className="App-header">
+                    <form>
+                        <input type="text" name="shoppingcarturl" onChange={this.handleChange}/>
+                    </form>
                     <img src={logo} className="App-logo" alt="logo"/>
                     <h2>Inet tools</h2>
                 </div>
@@ -30,7 +61,7 @@ class App extends Component {
 }
 
 const shoppingCartStyle = {
-    'list-style': 'none'
+    listStyleType: 'none'
 }
 
 

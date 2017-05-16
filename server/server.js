@@ -45,7 +45,7 @@ apiRouter.get('/shoppingcart', function(req, res) {
             });
             res.json(cart);
         }else {
-            res.json({ message: 'NADA' });
+            res.status(500).send('Could not find shoppingcart');
         }
     })
 
