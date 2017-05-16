@@ -38,7 +38,7 @@ apiRouter.get('/shoppingcart', function(req, res) {
                 let item = {};
                 item.url = $(this).find('.ellipsis').attr('href');
                 item.id = item.url.split('/')[2];
-                item.imageUrl = "inetimg.se/img/110x83/" + item.id + "_0.jpg";
+                item.imageUrl = "https://inetimg.se/img/110x83/" + item.id + "_0.jpg";
                 item.title =  $(this).find('.ellipsis').html();
                 item.price = $(this).find('.product-price .active-price').html()
                 cart.items.push(item);
