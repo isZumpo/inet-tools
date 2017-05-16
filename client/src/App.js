@@ -21,25 +21,36 @@ class App extends Component {
             <div className="App">
                 <div className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>Welcome to React</h2>
+                    <h2>Inet tools</h2>
                 </div>
-                {getShoppingItems(this.state)}
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
+                {getShoppingCart(this.state)}
             </div>
         );
+    }
+}
+
+const shoppingCartStyle = {
+    'list-style': 'none'
+}
+
+
+function getShoppingCart(props) {
+    if(props) {
+        return (<div className="shoppingcart">
+            <h1><a href={props.cartURL}>Shopping Cart: </a></h1>
+            <ul style={shoppingCartStyle}>{getShoppingItems(props)}</ul>
+        </div>)
     }
 }
 
 function getShoppingItems(props) {
     if(props && props.items) {
         return props.items.map(item => (
-            <h1 key={item.id}>
+            <li key={item.id} className="shoppingcart-item">
                 {item.title}
                 ({item.price})
                 <img src={item.imageUrl} alt=""/>
-            </h1>))
+            </li>))
     }
 }
 

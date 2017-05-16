@@ -22,3 +22,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.shoppingcart {
+  background-color: red;
+}
+
+.shoppingcart-item {
+  background-color: #ff8f22;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  width: 200px;
+
+}
