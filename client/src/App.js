@@ -78,9 +78,9 @@ const shoppingCartStyle = {
  */
 function getShoppingCart(props) {
     if(props) {
-        return (<div className="shoppingcart">
+        return (<div className="shoppingcart container">
             <h1><a href={props.cartURL}>Shopping Cart: </a></h1>
-            <ul style={shoppingCartStyle}>{getShoppingItems(props)}</ul>
+            <div style={shoppingCartStyle}>{getShoppingItems(props)}</div>
         </div>)
     }
 }
@@ -94,11 +94,11 @@ function getShoppingCart(props) {
 function getShoppingItems(props) {
     if(props && props.items) {
         return props.items.map(item => (
-            <li key={item.id} className="shoppingcart-item">
-                {item.title}
-                ({item.price})
+            <div key={item.id} className="shoppingcart-item col-xs-6 col-sm-4 col-lg-3">
                 <img src={item.imageUrl} alt=""/>
-            </li>))
+                <h4>{item.title}
+                    ({item.price})</h4>
+            </div>))
     }
 }
 

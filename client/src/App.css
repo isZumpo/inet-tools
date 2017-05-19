@@ -31,6 +31,15 @@
   background-color: #ff8f22;
   border: 1px solid black;
   margin-bottom: 5px;
-  width: 200px;
+  float: left;
+  height: 245px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
 
+.shoppingcart-item > img {
+  width: 100%;
+  height: 70%;
+  margin: 0;
 }
