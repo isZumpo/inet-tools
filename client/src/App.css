@@ -24,22 +24,23 @@
 }
 
 .shoppingcart {
-  background-color: red;
+  /*background-color: red;*/
 }
 
 .shoppingcart-item {
-  background-color: #ff8f22;
-  border: 1px solid black;
+  /*background-color: #ff8f22;*/
+  /*border: 1px solid black;*/
   margin-bottom: 5px;
   float: left;
   height: 245px;
   margin-left: 0;
   margin-right: 0;
-  padding: 0;
+  border: 1px solid black;
 }
 
-.shoppingcart-item > img {
+.shoppingcart-item-image {
   width: 100%;
   height: 70%;
   margin: 0;
+  border-bottom: 2px solid #c00;
 }

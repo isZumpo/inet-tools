@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+import FontAwesome from 'react-fontawesome';
+
 
 /**
  * Inet tools basic shoppingcart checker
@@ -80,6 +82,11 @@ function getShoppingCart(props) {
     if(props) {
         return (<div className="shoppingcart container">
             <h1><a href={props.cartURL}>Shopping Cart: </a></h1>
+            <h2>Clone<FontAwesome
+                name='clone'
+                size='1x'
+                style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+            /></h2>
             <div style={shoppingCartStyle}>{getShoppingItems(props)}</div>
         </div>)
     }
@@ -94,10 +101,12 @@ function getShoppingCart(props) {
 function getShoppingItems(props) {
     if(props && props.items) {
         return props.items.map(item => (
-            <div key={item.id} className="shoppingcart-item col-xs-6 col-sm-4 col-lg-3">
-                <img src={item.imageUrl} alt=""/>
-                <h4>{item.title}
-                    ({item.price})</h4>
+            <div className="col-xs-6 col-sm-4 col-lg-3">
+                <div key={item.id} className="shoppingcart-item col-xs-12">
+                    <img className="shoppingcart-item-image" src={item.imageUrl} alt=""/>
+                    <h4>{item.title}
+                        ({item.price})</h4>
+                </div>
             </div>))
     }
 }
