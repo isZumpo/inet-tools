@@ -4,6 +4,8 @@ import axios from 'axios';
 import FontAwesome from 'react-fontawesome';
 import FormControl from 'react-bootstrap/lib/FormControl'
 import ControlLabel from 'react-bootstrap/lib/ControlLabel'
+import Modal from 'react-bootstrap/lib/Modal'
+import Button from 'react-bootstrap/lib/Button'
 
 
 /**
@@ -59,6 +61,35 @@ class App extends Component {
         window.prompt("Copy to clipboard: Ctrl+C, Enter", "asdasda");
     }
 
+    getCopyModal() {
+        return(
+            <div className="static-modal">
+                <Modal.Dialog>
+                    <Modal.Header>
+                        <Modal.Title>Kopiera</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <FormControl //Should be readonly
+                            type="text"
+                            id="copyinput"
+                            value="91823123"
+                            placeholder="Produktnr"
+                            //onChange={(e)=>{console.log("saijsad")}}
+                            onFocus={(e)=>{console.log(e.target.select())}}
+                        />
+                    </Modal.Body>
+
+                    <Modal.Footer>
+                        <Button>Förra</Button>
+                        <Button>Nästa</Button>
+                        <Button bsStyle="primary">Stäng</Button>
+                    </Modal.Footer>
+
+                </Modal.Dialog>
+            </div>
+        )
+    }
+
     /**
      * A method that renders a shoppingcart containing shoppingcart items
      * @param props Props containing a object with proper structure for a shoppingcart
@@ -98,6 +129,7 @@ class App extends Component {
     render() {
         return (
             <div className="App container">
+                {this.getCopyModal()}
                 <ControlLabel>Sök efter kundvagn</ControlLabel>
                 <FormControl
                     type="text"
