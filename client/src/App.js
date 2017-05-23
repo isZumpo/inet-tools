@@ -86,8 +86,15 @@ class App extends Component {
 
     cloneCopyKeyPress(event) {
         if(this.state && this.state.showModal) {
+            console.log(event.code);
             if(event.code == "KeyC" && event.ctrlKey) {
                 this.cloneInc();
+            }else if(event.code == "ArrowLeft") {
+                this.cloneDec();
+            }else if(event.code == "ArrowRight") {
+                this.cloneInc();
+            }else if(event.code == "Escape") {
+                this.setState({showModal: false});
             }
         }
     }
