@@ -37,3 +37,7 @@
   margin: 0;
   border-bottom: 2px solid #c00;
 }
+
+#isCloneSelected {
+  background-color: #c00;
+}

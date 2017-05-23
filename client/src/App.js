@@ -18,6 +18,12 @@ class App extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.getCopyModal = this.getCopyModal.bind(this);
         this.cloneToggle = this.cloneToggle.bind(this);
+        this.cloneInc = this.cloneInc.bind(this);
+        this.cloneDec = this.cloneDec.bind(this);
+        this.isCloneSelected = this.isCloneSelected.bind(this);
+        this.cloneCopyKeyPress = this.cloneCopyKeyPress.bind(this);
+        document.addEventListener("keydown", this.cloneCopyKeyPress);
+
     }
 
     componentDidMount() {
@@ -52,6 +58,7 @@ class App extends Component {
         axios.get('http://localhost:8080/api/shoppingcart?cartId=' + id)
             .then(function (response) {
                 console.log({shoppingcart: response.data});
+                self.setState({modalSelect: 0});
                 self.setState({shoppingcart: response.data});
             })
             .catch(function (error) {
@@ -66,11 +73,23 @@ class App extends Component {
     }
 
     cloneInc(event) {
-
+        if(this.state.modalSelect < this.state.shoppingcart.items.length - 1) {
+            this.setState({modalSelect: this.state.modalSelect + 1});
+        }
     }
 
     cloneDec(event) {
+        if(this.state.modalSelect > 0) {
+            this.setState({modalSelect: this.state.modalSelect - 1});
+        }
+    }
 
+    cloneCopyKeyPress(event) {
+        if(this.state && this.state.showModal) {
+            if(event.code == "KeyC" && event.ctrlKey) {
+                this.cloneInc();
+            }
+        }
     }
 
     getCopyModal() {
@@ -85,16 +104,16 @@ class App extends Component {
                             <FormControl //Should be readonly
                                 type="text"
                                 id="copyinput"
-                                value="91823123"
+                                value={this.state.shoppingcart.items[this.state.modalSelect].id}
                                 placeholder="Produktnr"
-                                //onChange={(e)=>{console.log("saijsad")}}
-                                onFocus={(e)=>{console.log(e.target.select())}}
+                                //onChange={(e)=>{e.target.select()}}
+                                onFocus={(e)=>{e.target.select()}}
                             />
                         </Modal.Body>
 
                         <Modal.Footer>
-                            <Button>Förra</Button>
-                            <Button>Nästa</Button>
+                            <Button onClick={this.cloneDec}>Förra</Button>
+                            <Button onClick={this.cloneInc}>Nästa</Button>
                             <Button onClick={this.cloneToggle} bsStyle="primary">Stäng</Button>
                         </Modal.Footer>
 
@@ -121,6 +140,12 @@ class App extends Component {
         }
     }
 
+    isCloneSelected(index) {
+        if(index == this.state.modalSelect) {
+            return "isCloneSelected";
+        }
+    }
+
     /**
      *
      * A method that renders a shoppingcart item
@@ -129,9 +154,9 @@ class App extends Component {
      */
     getShoppingItems(props) {
         if(props && props.shoppingcart && props.shoppingcart.items) {
-            return props.shoppingcart.items.map(item => (
+            return props.shoppingcart.items.map((item, index) => (
                 <div className="col-xs-6 col-sm-4 col-lg-3">
-                    <div key={item.id} className="shoppingcart-item col-xs-12">
+                    <div key={item.id} className="shoppingcart-item col-xs-12" id={this.isCloneSelected(index)}>
                         <img className="shoppingcart-item-image" src={item.imageUrl} alt=""/>
                         <h4>{item.title}
                             ({item.price})</h4>
