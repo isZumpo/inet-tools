@@ -75,12 +75,14 @@ class App extends Component {
     cloneInc(event) {
         if(this.state.modalSelect < this.state.shoppingcart.items.length - 1) {
             this.setState({modalSelect: this.state.modalSelect + 1});
+            document.getElementById("copyinput").select();
         }
     }
 
     cloneDec(event) {
         if(this.state.modalSelect > 0) {
             this.setState({modalSelect: this.state.modalSelect - 1});
+            document.getElementById("copyinput").select();
         }
     }
 
