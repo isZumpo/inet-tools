@@ -16,14 +16,17 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
+        this.getCopyModal = this.getCopyModal.bind(this);
+        this.cloneToggle = this.cloneToggle.bind(this);
     }
 
     componentDidMount() {
         let self = this;
+        self.setState({showModal: false});
+        self.setState({modalSelect: 0});
         axios.get('http://localhost:8080/api/shoppingcart?cartId=10402169')
             .then(function (response) {
-                console.log(response.data);
-                self.setState(response.data)
+                self.setState({shoppingcart: response.data})
             })
             .catch(function (error) {
                 console.log(error);
@@ -48,46 +51,57 @@ class App extends Component {
         let self = this;
         axios.get('http://localhost:8080/api/shoppingcart?cartId=' + id)
             .then(function (response) {
-                console.log(response.data);
-                self.setState(response.data);
+                console.log({shoppingcart: response.data});
+                self.setState({shoppingcart: response.data});
             })
             .catch(function (error) {
                 console.log(error);
             });
     }
 
-    clone(event) {
-        console.log("Clone time mate!");
-        window.prompt("Copy to clipboard: Ctrl+C, Enter", "asdasda");
+    cloneToggle(event) {
+        if(this.state.shoppingcart.items.length > 0) {
+            this.setState({showModal: !this.state.showModal});
+        }
+    }
+
+    cloneInc(event) {
+
+    }
+
+    cloneDec(event) {
+
     }
 
     getCopyModal() {
-        return(
-            <div className="static-modal">
-                <Modal.Dialog>
-                    <Modal.Header>
-                        <Modal.Title>Kopiera</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <FormControl //Should be readonly
-                            type="text"
-                            id="copyinput"
-                            value="91823123"
-                            placeholder="Produktnr"
-                            //onChange={(e)=>{console.log("saijsad")}}
-                            onFocus={(e)=>{console.log(e.target.select())}}
-                        />
-                    </Modal.Body>
+        if(this.state && this.state.showModal) {
+            return(
+                <div className="static-modal">
+                    <Modal.Dialog>
+                        <Modal.Header>
+                            <Modal.Title>Kopiera</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <FormControl //Should be readonly
+                                type="text"
+                                id="copyinput"
+                                value="91823123"
+                                placeholder="Produktnr"
+                                //onChange={(e)=>{console.log("saijsad")}}
+                                onFocus={(e)=>{console.log(e.target.select())}}
+                            />
+                        </Modal.Body>
 
-                    <Modal.Footer>
-                        <Button>Förra</Button>
-                        <Button>Nästa</Button>
-                        <Button bsStyle="primary">Stäng</Button>
-                    </Modal.Footer>
+                        <Modal.Footer>
+                            <Button>Förra</Button>
+                            <Button>Nästa</Button>
+                            <Button onClick={this.cloneToggle} bsStyle="primary">Stäng</Button>
+                        </Modal.Footer>
 
-                </Modal.Dialog>
-            </div>
-        )
+                    </Modal.Dialog>
+                </div>
+            )
+        }
     }
 
     /**
@@ -98,8 +112,8 @@ class App extends Component {
         if(props) {
             return (<div className="shoppingcart container">
                 <h1><a href={props.cartURL}>Shopping Cart: </a></h1>
-                <button type="button" className="btn" onClick={this.clone}><FontAwesome
-                    name='clone'
+                <button type="button" className="btn" onClick={this.cloneToggle}><FontAwesome
+                    name='cloneToggle'
                     style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
                 /></button>
                 <div>{this.getShoppingItems(props)}</div>
@@ -114,8 +128,8 @@ class App extends Component {
      * @returns {Array}
      */
     getShoppingItems(props) {
-        if(props && props.items) {
-            return props.items.map(item => (
+        if(props && props.shoppingcart && props.shoppingcart.items) {
+            return props.shoppingcart.items.map(item => (
                 <div className="col-xs-6 col-sm-4 col-lg-3">
                     <div key={item.id} className="shoppingcart-item col-xs-12">
                         <img className="shoppingcart-item-image" src={item.imageUrl} alt=""/>
