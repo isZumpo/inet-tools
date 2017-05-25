@@ -90,7 +90,8 @@ class App extends Component {
         if(this.state && this.state.showModal) {
             console.log(event.code);
             if(event.code == "KeyC" && event.ctrlKey) {
-                this.cloneInc();
+                let self = this;
+                setTimeout(function() { self.cloneInc(); }, 5);
             }else if(event.code == "ArrowLeft") {
                 this.cloneDec();
             }else if(event.code == "ArrowRight") {
