@@ -51,6 +51,44 @@ apiRouter.get('/shoppingcart', function(req, res) {
 
 });
 
+apiRouter.get('/inkfinder', function(req, res) {
+    let findPrinterBrandsUrl = "https://www.inet.se/kategori/209/blackpatroner";
+    let printerBrands = [];
+    request(findPrinterBrandsUrl, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            let $ = cheerio.load(response.body);
+
+            //Get all printer brands
+            $('#consumables-brands option').each(function (index) {
+                let value = $(this).val();
+                // value.replaceAll(' ', '%20');
+                if(value != "") {
+                    printerBrands.push({value: value});
+                }
+            });
+
+            let printers = [];
+            for(let printerBrand in printerBrands) {
+                request('https://www.inet.se/kategori/209/blackpatroner?selectedBrand=' + printerBrands[printerBrand].value + '&search=', function (error, response, body) {
+                    let $ = cheerio.load(response.body);
+                    if (!error && response.statusCode == 200) {
+                        $('.consumables-printer-list a').each(function (index) {
+                            printers.push($(this).html());
+                        });
+                    }
+                });
+            }
+            setTimeout(function() {
+                res.json(printers);
+            }, 1400);
+
+        }else {
+            res.status(500).send('Could not find shoppingcart');
+        }
+    });
+
+});
+
 
 //Serve root
 clientRouter.get('/', function (req, res) {
