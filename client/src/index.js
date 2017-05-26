@@ -1,29 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {Navbar, Nav, NavItem} from 'react-bootstrap/lib'
+import Navigation from './Navigation'
 import './index.css';
+import { BrowserRouter, Route } from 'react-router-dom'
+import MoneyCounter from './MoneyCounter'
 
 
-const navbarInstance = (
-    <Navbar inverse collapseOnSelect>
-        <Navbar.Header>
-            <Navbar.Brand>
-                <a href="#">Inet tools</a>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-            <Nav>
-                <NavItem eventKey={1} href="#">KassaCopy</NavItem>
-                <NavItem eventKey={2} href="#">BläckFinder</NavItem>
-            </Nav>
-        </Navbar.Collapse>
-    </Navbar>
-);
 
-ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(navbarInstance, document.getElementById('navbar'));
+const Application = () => (
+    <div>
+        <Navigation />
+        <Route exact path="/" component={App} />
+        <Route path="/moneycounter" component={MoneyCounter} />
+    </div>
+)
 
-
+ReactDOM.render(
+    <BrowserRouter>
+        <Application />
+    </BrowserRouter>, document.getElementById('root'));
+// ReactDOM.render(navbarInstance, document.getElementById('navbar'));
 
