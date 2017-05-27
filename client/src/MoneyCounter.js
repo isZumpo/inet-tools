@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import FormControl from 'react-bootstrap/lib/FormControl'
+import InputGroup from 'react-bootstrap/lib/InputGroup'
 
 class MoneyCounter extends Component {
 
@@ -16,16 +18,19 @@ class MoneyCounter extends Component {
 
     render() {
         return (
-            <div>
-                <MoneyCounterItem type="1" onChange={this.onItemChange}/>
-                <MoneyCounterItem type="2"  onChange={this.onItemChange}/>
-                <MoneyCounterItem type="5" onChange={this.onItemChange}/>
-                <MoneyCounterItem type="10" onChange={this.onItemChange}/>
-                <MoneyCounterItem type="20" onChange={this.onItemChange}/>
-                <MoneyCounterItem type="50" onChange={this.onItemChange}/>
-                <MoneyCounterItem type="100" onChange={this.onItemChange}/>
-                <MoneyCounterItem type="200" onChange={this.onItemChange}/>
-                <MoneyCounterItem type="500" onChange={this.onItemChange}/>
+            <div className="container">
+                <div className="col-xs-6">
+                    <MoneyCounterItem type="1" onChange={this.onItemChange}/>
+                    <MoneyCounterItem type="2"  onChange={this.onItemChange}/>
+                    <MoneyCounterItem type="5" onChange={this.onItemChange}/>
+                    <MoneyCounterItem type="10" onChange={this.onItemChange}/>
+                    <MoneyCounterItem type="20" onChange={this.onItemChange}/>
+                    <MoneyCounterItem type="50" onChange={this.onItemChange}/>
+                    <MoneyCounterItem type="100" onChange={this.onItemChange}/>
+                    <MoneyCounterItem type="200" onChange={this.onItemChange}/>
+                    <MoneyCounterItem type="500" onChange={this.onItemChange}/>
+                </div>
+
                 {this.getTotal()}
             </div>
         );
@@ -70,9 +75,16 @@ class MoneyCounterItem extends Component {
     render() {
         return (
             <div>
-                <input type="text" onChange={this.onInputChange}/>
-                <span>{this.props.type}</span>
-                <span>- {this.state.total}</span>
+                <InputGroup>
+                    <InputGroup.Addon className="money-counter-item-type">{this.props.type}kr</InputGroup.Addon>
+                    <FormControl //Should be readonly
+                        type="text"
+                        placeholder="Antal"
+                        onChange={this.onInputChange}
+                    />
+                    <InputGroup.Addon className="money-counter-item-total">{this.state.total}kr</InputGroup.Addon>
+
+                </InputGroup>
             </div>
         );
     }

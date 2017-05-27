@@ -41,3 +41,11 @@
 #isCloneSelected {
   background-color: #c00;
 }
+
+.money-counter-item-type {
+  min-width: 60px;
+}
+
+.money-counter-item-total {
+  min-width: 70px;
+}
