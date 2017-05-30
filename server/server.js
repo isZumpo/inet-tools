@@ -100,9 +100,9 @@ request(findPrinterBrandsUrl, function (error, response, body) {
                 if (!error && response.statusCode == 200) {
                     $('.consumables-printer-list a').each(function (index) {
                         printers.push({
-                            model: $(this).html(),
+                            value: $(this).html(),
                             brand: printerBrands[printerBrand].value,
-                            link: 'https://www.inet.se/kategori/209/blackpatroner' + $(this).attr('href')
+                            id: 'https://www.inet.se/kategori/209/blackpatroner' + $(this).attr('href')
                         });
                     });
                 }

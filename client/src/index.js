@@ -5,6 +5,7 @@ import Navigation from './Navigation'
 import './index.css';
 import { BrowserRouter, Route } from 'react-router-dom'
 import MoneyCounter from './MoneyCounter'
+import InkFinder from './InkFinder'
 
 
 
@@ -13,6 +14,7 @@ const Application = () => (
         <Navigation />
         <Route exact path="/" component={App} />
         <Route path="/moneycounter" component={MoneyCounter} />
+        <Route path="/inkfinder" component={InkFinder} />
     </div>
 )
 
