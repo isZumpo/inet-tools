@@ -42,8 +42,7 @@ class InkFinder extends Component {
     search(event) {
         let searchString = event.target.value;
         let search = [];
-        console.log(searchIndex.search(searchString));
-        searchIndex.search(searchString).map((item) => (
+        searchIndex.search(searchString, {expand: true}).map((item) => (
             search.push(parseInt(item.ref))
         ));
         this.setState({searchResults: search});
