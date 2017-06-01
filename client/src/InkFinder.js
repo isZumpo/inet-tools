@@ -51,7 +51,7 @@ class InkFinder extends Component {
     getSearchResults() {
         //Show just 15 items
         return this.state.searchResults.slice(0, 15).map((item, index) => (
-            <a href={this.state.shoppingcart[item].url}><h1>{this.state.shoppingcart[item].title}</h1></a>
+            <a href={this.state.shoppingcart[item].url} target="_blank"><h1>{this.state.shoppingcart[item].title}</h1></a>
         ));
     }
 
