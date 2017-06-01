@@ -1,15 +1,23 @@
-import Search from 'react-search'
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import elasticlunr from 'elasticlunr'
+import FormControl from 'react-bootstrap/lib/FormControl'
+import FormGroup from 'react-bootstrap/lib/FormGroup'
 
-
+var searchIndex;
 class InkFinder extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            printers: []
-        }
+            printers: [],
+            searchResults: [],
+        };
+        searchIndex = elasticlunr(function () {
+            this.addField('title');
+            this.setRef('id');
+        })
+        this.search = this.search.bind(this);
     }
 
     componentDidMount() {
@@ -19,10 +27,33 @@ class InkFinder extends Component {
                 self.setState({printers: response.data});
                 console.log(response);
                 self.setState({shoppingcart: response.data})
+                for(let i in response.data) {
+                    searchIndex.addDoc(response.data[i]);
+                }
+
+
+
             })
             .catch(function (error) {
                 console.log(error);
             });
+    }
+
+    search(event) {
+        let searchString = event.target.value;
+        let search = [];
+        console.log(searchIndex.search(searchString));
+        searchIndex.search(searchString).map((item) => (
+            search.push(parseInt(item.ref))
+        ));
+        this.setState({searchResults: search});
+    }
+
+    getSearchResults() {
+        //Show just 15 items
+        return this.state.searchResults.slice(0, 15).map((item, index) => (
+            <a href={this.state.shoppingcart[item].url}><h1>{this.state.shoppingcart[item].title}</h1></a>
+        ));
     }
 
     render() {
@@ -30,7 +61,10 @@ class InkFinder extends Component {
             <div className="container">
                 <div className="col-xs-6">
                     <h1>Hello mate!</h1>
-                    <Search items={this.state.printers} />
+                    <FormGroup>
+                        <FormControl type="text" placeholder="Search" onChange={this.search} />
+                        {this.getSearchResults()}
+                    </FormGroup>
                 </div>
             </div>
         );

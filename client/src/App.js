@@ -89,14 +89,14 @@ class App extends Component {
     cloneCopyKeyPress(event) {
         if(this.state && this.state.showModal) {
             console.log(event.code);
-            if(event.code == "KeyC" && event.ctrlKey) {
+            if(event.code === "KeyC" && event.ctrlKey) {
                 let self = this;
                 setTimeout(function() { self.cloneInc(); }, 5);
-            }else if(event.code == "ArrowLeft") {
+            }else if(event.code === "ArrowLeft") {
                 this.cloneDec();
-            }else if(event.code == "ArrowRight") {
+            }else if(event.code === "ArrowRight") {
                 this.cloneInc();
-            }else if(event.code == "Escape") {
+            }else if(event.code === "Escape") {
                 this.setState({showModal: false});
             }
         }
@@ -151,7 +151,7 @@ class App extends Component {
     }
 
     isCloneSelected(index) {
-        if(index == this.state.modalSelect) {
+        if(index === this.state.modalSelect) {
             return "isCloneSelected";
         }
     }
