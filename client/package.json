@@ -10,7 +10,8 @@
     "react-fontawesome": "^1.6.1"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "url-loader": "^0.5.9"
   },
   "scripts": {
     "start": "react-scripts start",
