@@ -85,7 +85,7 @@ class InkFinder extends Component {
                     <div className="col-xs-8 col-xs-offset-2">
                         <h1 className="text-center">Ink Finder</h1>
                         <FormGroup >
-                            <FormControl bsSize="large" type="text" placeholder="Search" onChange={this.search} />
+                            <FormControl bsSize="large" type="text" placeholder="Sök efter skrivare" onChange={this.search} />
                         </FormGroup>
                     </div>
                     <div className="row col-xs-12" style={{margin: "20px", minHeight: "200px", padding:"0px", borderRadius: "3px"}}>
