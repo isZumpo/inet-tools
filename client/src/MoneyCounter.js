@@ -29,6 +29,7 @@ class MoneyCounter extends Component {
                     <MoneyCounterItem type="100" onChange={this.onItemChange}/>
                     <MoneyCounterItem type="200" onChange={this.onItemChange}/>
                     <MoneyCounterItem type="500" onChange={this.onItemChange}/>
+                    <MoneyCounterItem type="1000" onChange={this.onItemChange}/>
                 </div>
 
                 {this.getTotal()}
