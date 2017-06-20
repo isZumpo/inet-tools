@@ -6,6 +6,8 @@ var cheerio = require('cheerio');
 var path = require('path');
 var cors = require('cors');
 
+import CartAnalyzer from './CartAnalyzer'
+
 
 //Printers
 var printers = [];
@@ -57,6 +59,12 @@ apiRouter.get('/shoppingcart', function(req, res) {
 
 apiRouter.get('/inkfinder', function(req, res) {
     res.json(printers);
+});
+
+apiRouter.get('/cartanalyzer', function(req, res) {
+    let cartUrl = 'https://www.inet.se/kundvagn/visa/' + req.query.cartId + '/';
+    let analyzer = new CartAnalyzer();
+    analyzer.loadCart(cartUrl);
 });
 
 

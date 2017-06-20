@@ -2,12 +2,14 @@
   "name": "node-api",
   "main": "server.js",
   "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-node6": "^11.0.0",
+    "body-parser": "~1.0.1",
+    "cheerio": "0.22.0",
+    "cors": "2.8.3",
     "express": "~4.8",
     "mongoose": "~3.6.13",
-    "body-parser": "~1.0.1",
-    "request": "2.81.0",
-    "cheerio": "0.22.0",
     "path": "0.12.7",
-    "cors": "2.8.3"
+    "request": "2.81.0"
   }
 }

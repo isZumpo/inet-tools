@@ -19,6 +19,7 @@ class Navigation extends Component {
                         <NavItem eventKey={1}><Link to="/">KassaCopy</Link></NavItem>
                         <NavItem eventKey={2}><Link to="/inkfinder">BläckFinder</Link></NavItem>
                         <NavItem eventKey={3}><Link to="/moneycounter">MoneyCounter</Link></NavItem>
+                        <NavItem eventKey={3}><Link to="/cartanalyzer">CartAnalyzer</Link></NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
