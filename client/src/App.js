@@ -3,9 +3,10 @@ import './App.css';
 import axios from 'axios';
 import FontAwesome from 'react-fontawesome';
 import FormControl from 'react-bootstrap/lib/FormControl'
-import ControlLabel from 'react-bootstrap/lib/ControlLabel'
 import Modal from 'react-bootstrap/lib/Modal'
 import Button from 'react-bootstrap/lib/Button'
+import FormGroup from 'react-bootstrap/lib/FormGroup';
+
 
 
 /**
@@ -139,7 +140,7 @@ class App extends Component {
      */
     getShoppingCart(props) {
         if(props) {
-            return (<div className="shoppingcart container">
+            return (<div className="shoppingcart col-xs-12">
                 <h1><a href={props.cartURL}>Shopping Cart: </a></h1>
                 <button type="button" className="btn" onClick={this.cloneToggle}><FontAwesome
                     name='cloneToggle'
@@ -177,16 +178,20 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App container">
-                {this.getCopyModal()}
-                <ControlLabel>Sök efter kundvagn</ControlLabel>
-                <FormControl
-                    type="text"
-                    placeholder="Kundvagns Url eller id"
-                    onChange={this.handleChange}
-                />
-                {this.getShoppingCart(this.state)}
+        <div className="App container">
+            <div className="col-xs-10 col-xs-offset-1">
+                <div className="col-xs-8 col-xs-offset-2">
+                    {this.getCopyModal()}
+                    <h1 className="text-center">Sök efter kundvagn</h1>
+                    <FormGroup >
+                        <FormControl bsSize="large" type="text" placeholder="Kundvagns Url eller id" onChange={this.handleChange} />
+                    </FormGroup>
+                </div>
+                <div className="row col-xs-12" style={{margin: "20px", minHeight: "200px", padding:"0px", borderRadius: "3px"}}>
+                    {this.getShoppingCart(this.state)}
+                </div>
             </div>
+        </div>
         );
     }
 }
