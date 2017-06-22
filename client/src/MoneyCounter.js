@@ -13,7 +13,6 @@ class MoneyCounter extends Component {
             total: 0,
             items: []
         }
-
     }
 
     render() {
@@ -68,8 +67,7 @@ class MoneyCounterItem extends Component {
     onInputChange(event) {
         let count = event.target.value;
         let total = count * this.props.type;
-        this.setState({count: count})
-        this.setState({total: total})
+        this.setState({count: count, total: total})
         this.props.onChange(this.props.type, total);
     }
 
