@@ -13,6 +13,52 @@ class CartAnalyzer {
         this.actualItems = 0;
 
         this.products = [];
+
+
+
+        this.productTagIndications = {
+            'gpu' : [
+                ['Datorkomponenter', 'Grafikkort / GPU', 'AMD Radeon'],
+                ['Datorkomponenter', 'Grafikkort / GPU Beräkningskort', 'Quadro'],
+                ['Datorkomponenter', 'Grafikkort / GPU Beräkningskort', 'GeForce GT'],
+                ['Datorkomponenter', 'Grafikkort / GPU Beräkningskort', 'GeForce GTX Gaming'],
+            ],
+            'cpu': [
+                ['Datorkomponenter', 'Processor / CPU' ,'AMD'],
+                ['Datorkomponenter', 'Processor / CPU' ,'Intel']
+            ],
+            'psu': [
+                ['Datorkomponenter', 'Nätdel / PSU']
+            ],
+            'motherboard': [
+                ['Datorkomponenter', 'Moderkort', 'För AMD-processor'],
+                ['Datorkomponenter', 'Moderkort', 'För Intel-processor'],
+                ['Datorkomponenter', 'Moderkort', 'Integrerad CPU (SoC)'],
+            ],
+            'hdd': [
+                ['Datorkomponenter', 'Hårddisk SSD', '2.5" SATA'],
+                ['Datorkomponenter', 'Hårddisk SSD', 'M.2'],
+                ['Datorkomponenter', 'Hårddisk SSD', 'mSATA'],
+                ['Datorkomponenter', 'Hårddisk SSD', 'Övriga'],
+                ['Datorkomponenter', 'Hårddisk Mekanisk', '2.5" Bärbar'], // Hårddisk Mekanisk might contain a space at the end
+                ['Datorkomponenter', 'Hårddisk Mekanisk', '3.5" Stationär'],
+            ],
+            'ram': [
+                ['Datorkomponenter', 'Internminne / RAM', 'Till stationär'],
+            ],
+            'cpufan': [
+                ['Datorkomponenter', 'Kylning / Moddning', 'Processorkylning'],
+            ],
+            'case': [
+                ['Datorkomponenter', 'Datorlåda / Chassi', 'ATX'],
+                ['Datorkomponenter', 'Datorlåda / Chassi', 'mATX'],
+                ['Datorkomponenter', 'Datorlåda / Chassi', 'mITX'],
+                ['Datorkomponenter', 'Datorlåda / Chassi', 'Server'],
+
+            ]
+
+        }
+
     }
 
 
@@ -34,7 +80,7 @@ class CartAnalyzer {
                                 values: [],
                                 name: '',
                                 keywords: []
-                            }
+                            };
 
                             //Get product name
                             product.name = $('.product-header .ellipsis').text();
@@ -44,13 +90,13 @@ class CartAnalyzer {
                                 product.values.push({key: $(this).find('th'), value: $(this).find('td')});
                             });
 
-                            //Get breadcrumbs for product
+                            //Get breadcrumbs/keywords for product
                             $('.breadcrumb li a span').each(function (index) {
                                 product.keywords.push($(this).text());
                             });
 
 
-                            console.log(product);
+                            self.products.push(product);
                         }
                     });
                 });
