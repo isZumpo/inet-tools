@@ -19,9 +19,9 @@ class CartAnalyzer {
         this.productTagIndications = {
             'gpu' : [
                 ['Datorkomponenter', 'Grafikkort / GPU', 'AMD Radeon'],
-                ['Datorkomponenter', 'Grafikkort / GPU Beräkningskort', 'Quadro'],
-                ['Datorkomponenter', 'Grafikkort / GPU Beräkningskort', 'GeForce GT'],
-                ['Datorkomponenter', 'Grafikkort / GPU Beräkningskort', 'GeForce GTX Gaming'],
+                ['Datorkomponenter', 'Grafikkort / GPU', 'Beräkningskort', 'Quadro'],
+                ['Datorkomponenter', 'Grafikkort / GPU', 'GeForce GT'],
+                ['Datorkomponenter', 'Grafikkort / GPU', 'GeForce GTX Gaming'],
             ],
             'cpu': [
                 ['Datorkomponenter', 'Processor / CPU' ,'AMD'],
@@ -97,23 +97,35 @@ class CartAnalyzer {
 
 
                             self.products.push(product);
+                            console.log("IS NOW: "  + self.products.length);
                         }
                     });
                 });
             }
         });
-        // cartItemList.forEach(function (cartItem, index) {
-        //
-        //    this.decodeItem(cartItem);
-        // });
+
+        setTimeout(function () {
+            console.log(self.products.length);
+            self.products.forEach(function (product, index) {
+                for(let key in self.productTagIndications) {
+                    for(let i = 0; i < self.productTagIndications[key].length; i++) {
+                        for(let j = 0; j < self.productTagIndications[key][i].length; j++) {
+                            if(product.keywords[j] !== self.productTagIndications[key][i][j]) {
+                                break
+                            }
+                            if(j === self.productTagIndications[key][i].length - 1) {
+                                console.log(key);
+                            }
+                        }
+
+                    }
+                }
+            })
+        }, 6000);
+
     }
 
-    decodeItem() {
-        this.request(cartUrl, function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                let $ = cheerio.load(response.body);
-            }
-        })
+    decodeItems() {
     }
 
     loadGPU(gpu) {
