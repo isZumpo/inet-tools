@@ -2,6 +2,7 @@ class CartAnalyzer {
 
     constructor() {
         this.cheerio = require('cheerio');
+        this.request = require('request');
         this.requiredItems = {
             ramType: "",
             cpuSocket: "",
@@ -18,40 +19,51 @@ class CartAnalyzer {
     loadCart(cartUrl) {
         let self = this;
         //Load cart from website
-        request(cartUrl, function (error, response, body) {
+        this.request(cartUrl, function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                let $ = this.cheerio.load(response.body);
+                let $ = self.cheerio.load(response.body);
                 $('.cart-content .cart-item').each(function (index) {
                     //Get url for more detailed info
-                    let cartItemUrl = $(this).find('.ellipsis').attr('href');
-
+                    let cartItemUrl = "https://www.inet.se" + $(this).find('.ellipsis').attr('href');
                     // Load more detailed view
-                    request(cartItemUrl, function (error, response, body) {
+                    self.request(cartItemUrl, function (error, response, body) {
                         if (!error && response.statusCode == 200) {
-                            let $ = this.cheerio.load(response.body);
+                            let $ = self.cheerio.load(response.body);
 
                             let product = {
                                 values: [],
                                 name: '',
                                 keywords: []
                             }
+
+                            //Get product name
+                            product.name = $('.product-header .ellipsis').text();
+
+                            //Get description info about product
                             $('.product-tab-specs .row').each(function (index) {
                                 product.values.push({key: $(this).find('th'), value: $(this).find('td')});
                             });
+
+                            //Get breadcrumbs for product
+                            $('.breadcrumb li a span').each(function (index) {
+                                product.keywords.push($(this).text());
+                            });
+
+
                             console.log(product);
                         }
                     });
                 });
             }
         });
-        cartItemList.forEach(function (cartItem, index) {
-
-           this.decodeItem(cartItem);
-        });
+        // cartItemList.forEach(function (cartItem, index) {
+        //
+        //    this.decodeItem(cartItem);
+        // });
     }
 
     decodeItem() {
-        request(cartUrl, function (error, response, body) {
+        this.request(cartUrl, function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 let $ = cheerio.load(response.body);
             }

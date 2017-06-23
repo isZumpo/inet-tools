@@ -65,6 +65,8 @@ apiRouter.get('/cartanalyzer', function(req, res) {
     let cartUrl = 'https://www.inet.se/kundvagn/visa/' + req.query.cartId + '/';
     let analyzer = new CartAnalyzer();
     analyzer.loadCart(cartUrl);
+    console.log("REQUEST MATE!");
+
 });
 
 

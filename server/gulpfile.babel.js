@@ -1,6 +1,9 @@
 // NOTE: I previously suggested doing this through Grunt, but had plenty of problems with
 // my set up. Grunt did some weird things with scope, and I ended up using nodemon. This
 // setup is now using Gulp. It works exactly how I expect it to and is WAY more concise.
+
+'use strict';
+
 var gulp = require('gulp'),
     spawn = require('child_process').spawn,
     node;
