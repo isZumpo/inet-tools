@@ -104,15 +104,22 @@ class CartAnalyzer {
             }
         });
 
+
+        //TODO move this into a function
         setTimeout(function () {
-            console.log(self.products.length);
-            self.products.forEach(function (product, index) {
+            //Go through each product and identify which type it is
+            self.products.forEach(function (product) {
+                //Get all keys and iterate through all tags for that product type
                 for(let key in self.productTagIndications) {
                     for(let i = 0; i < self.productTagIndications[key].length; i++) {
                         for(let j = 0; j < self.productTagIndications[key][i].length; j++) {
+
+                            //If product tag j does not match with product type tag j, move on
                             if(product.keywords[j] !== self.productTagIndications[key][i][j]) {
                                 break
                             }
+
+                            //Found a match
                             if(j === self.productTagIndications[key][i].length - 1) {
                                 console.log(key);
                             }
