@@ -7,6 +7,7 @@ var path = require('path');
 var cors = require('cors');
 
 import CartAnalyzer from './CartAnalyzer'
+import ShoppingFactory from './ShoppingFactory'
 
 
 //Printers
@@ -63,8 +64,9 @@ apiRouter.get('/inkfinder', function(req, res) {
 
 apiRouter.get('/cartanalyzer', function(req, res) {
     let cartUrl = 'https://www.inet.se/kundvagn/visa/' + req.query.cartId + '/';
-    let analyzer = new CartAnalyzer();
-    analyzer.loadCart(cartUrl);
+    // let analyzer = new CartAnalyzer();
+    ShoppingFactory.createShoppingCart(cartUrl);
+    // analyzer.loadCart(cartUrl);
     console.log("REQUEST MATE!");
 
 });
