@@ -5,7 +5,7 @@ class Product {
         this.type = undefined;
         this.values = undefined;
         this.keywords = undefined;
-        this.isLoaded = false;
+        this.loaded = false;
     }
 
     getType() {
@@ -18,6 +18,10 @@ class Product {
 
     getType() {
         return this.type;
+    }
+
+    getValues() {
+        return this.values;
     }
 
     setName(name) {
@@ -33,11 +37,11 @@ class Product {
     }
 
     setLoaded() {
-        this.isLoaded = true;
+        this.loaded = true;
     }
 
     isLoaded() {
-        return this.isLoaded;
+        return this.loaded;
     }
 
 

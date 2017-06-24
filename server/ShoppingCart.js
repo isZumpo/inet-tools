@@ -6,6 +6,7 @@ class ShoppingCart {
     constructor() {
         this.products = [];
         this.name = undefined;
+        this.ready = false;
     }
 
      getProducts() {
@@ -25,13 +26,17 @@ class ShoppingCart {
     }
 
     isLoaded() {
-        let isLoaded = true;
+        let loaded = this.ready;
         this.products.forEach(function (product) {
-            if(!product.isLoaded) {
-                isLoaded = false;
+            if(!product.isLoaded()) {
+                loaded = false;
             }
         });
-        return isLoaded;
+        return loaded;
+    }
+
+    setReady() {
+        this.ready = true;
     }
 
 }

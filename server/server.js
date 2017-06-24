@@ -65,10 +65,16 @@ apiRouter.get('/inkfinder', function(req, res) {
 apiRouter.get('/cartanalyzer', function(req, res) {
     let cartUrl = 'https://www.inet.se/kundvagn/visa/' + req.query.cartId + '/';
     // let analyzer = new CartAnalyzer();
-    ShoppingFactory.createShoppingCart(cartUrl);
-    // analyzer.loadCart(cartUrl);
-    console.log("REQUEST MATE!");
-
+    let shoppingCart = ShoppingFactory.createShoppingCart(cartUrl);
+    let refreshIntervalId = setInterval(function () {
+        if(shoppingCart.isLoaded()) {
+            shoppingCart.getProducts().forEach(function (product) {
+                console.log(product.getName() + ' : ' + product.getType());
+            });
+            res.json(shoppingCart);
+            clearInterval(refreshIntervalId);
+        }
+    }, 50);
 });
 
 

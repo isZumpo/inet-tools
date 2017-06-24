@@ -25,15 +25,7 @@ class ShoppingFactory {
                     shoppingCart.addProduct(ShoppingFactory.createProduct(productUrl));
                 });
             }
-            //TODO move this into a function
-            let refreshIntervalId = setInterval(function () {
-                if(shoppingCart.isLoaded()) {
-                    shoppingCart.getProducts().forEach(function (product) {
-                        console.log(product.getName() + ' : ' + product.getType());
-                    });
-                    clearInterval(refreshIntervalId);
-                }
-            }, 50);
+            shoppingCart.setReady();
         });
 
 
@@ -103,7 +95,7 @@ class ShoppingFactory {
                 //Set description info about product
                 let values = [];
                 $('.product-tab-specs .row').each(function (index) {
-                    values.push({key: $(this).find('th'), value: $(this).find('td')});
+                    values.push({key: $(this).find('th').text(), value: $(this).find('td').text()});
                 });
                 product.setValues(values);
 
