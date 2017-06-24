@@ -5,15 +5,33 @@ class ShoppingCart {
 
     constructor() {
         this.products = [];
+        this.name = undefined;
     }
 
      getProducts() {
         return this.products;
     }
 
+    getName() {
+        return this.name;
+    }
+
+    setName(name) {
+        this.name = name;
+    }
+
     addProduct(product) {
-        console.log(product);
         this.products.push(product);
+    }
+
+    isLoaded() {
+        let isLoaded = true;
+        this.products.forEach(function (product) {
+            if(!product.isLoaded) {
+                isLoaded = false;
+            }
+        });
+        return isLoaded;
     }
 
 }

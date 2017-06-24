@@ -1,10 +1,11 @@
 class Product {
 
-    constructor(name, type, values, keywords) {
-        this.name = name;
-        this.type = type;
-        this.values = values;
-        this.keywords = keywords;
+    constructor() {
+        this.name = undefined;
+        this.type = undefined;
+        this.values = undefined;
+        this.keywords = undefined;
+        this.isLoaded = false;
     }
 
     getType() {
@@ -29,6 +30,14 @@ class Product {
 
     setValues(values) {
         this.values = values;
+    }
+
+    setLoaded() {
+        this.isLoaded = true;
+    }
+
+    isLoaded() {
+        return this.isLoaded;
     }
 
 

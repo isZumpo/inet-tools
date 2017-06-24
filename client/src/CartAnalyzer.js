@@ -46,6 +46,9 @@ class CartAnalyzer extends Component {
                 return;
             }
         }
+        if(id == 0) {
+            return;
+        }
         let self = this;
         axios.get('http://localhost:8080/api/cartanalyzer?cartId=' + id)
             .then(function (response) {

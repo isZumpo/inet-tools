@@ -25,17 +25,18 @@ class ShoppingFactory {
                     shoppingCart.addProduct(ShoppingFactory.createProduct(productUrl));
                 });
             }
+            //TODO move this into a function
+            let refreshIntervalId = setInterval(function () {
+                if(shoppingCart.isLoaded()) {
+                    shoppingCart.getProducts().forEach(function (product) {
+                        console.log(product.getName() + ' : ' + product.getType());
+                    });
+                    clearInterval(refreshIntervalId);
+                }
+            }, 50);
         });
 
-        //TODO move this into a function
-        setTimeout(function () {
-            if(shoppingCart.getProducts().length > 0) {
-                shoppingCart.getProducts().forEach(function (product) {
-                    console.log(product.getName() + ' : ' + product.getType());
-                });
-            }
 
-        }, 3000);
 
         return shoppingCart;
     }
@@ -130,6 +131,7 @@ class ShoppingFactory {
 
                     }
                 }
+                product.setLoaded();
             }
         });
 
