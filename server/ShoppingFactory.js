@@ -13,7 +13,7 @@ class ShoppingFactory {
         let cheerio = require('cheerio');
         let request = require('request');
 
-        let shoppingCart = new ShoppingCart();
+        let shoppingCart = new ShoppingCart(cartUrl);
 
         //Load cart from website
         request(cartUrl, function (error, response, body) {
@@ -42,7 +42,7 @@ class ShoppingFactory {
         let cheerio = require('cheerio');
         let request = require('request');
 
-        let product = new Product(null, null, null, null);
+        let product = new Product(productUrl);
 
         let productTagIndications = {
             'gpu' : [

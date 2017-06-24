@@ -3,10 +3,11 @@ import Product from './Product.js';
 
 class ShoppingCart {
 
-    constructor() {
+    constructor(url) {
         this.products = [];
         this.name = undefined;
         this.ready = false;
+        this.url = url;
     }
 
      getProducts() {

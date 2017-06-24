@@ -1,11 +1,12 @@
 class Product {
 
-    constructor() {
+    constructor(url) {
         this.name = undefined;
         this.type = undefined;
         this.values = undefined;
         this.keywords = undefined;
         this.loaded = false;
+        this.url = url;
     }
 
     getType() {

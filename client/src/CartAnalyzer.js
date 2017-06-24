@@ -52,7 +52,7 @@ class CartAnalyzer extends Component {
         let self = this;
         axios.get('http://localhost:8080/api/cartanalyzer?cartId=' + id)
             .then(function (response) {
-                console.log("YEHAHH");
+                console.log(response.data);
             })
             .catch(function (error) {
                 console.log(error);
