@@ -82,7 +82,12 @@ class ShoppingFactory {
                 ['Datorkomponenter', 'Datorlåda / Chassi', 'mATX'],
                 ['Datorkomponenter', 'Datorlåda / Chassi', 'mITX'],
                 ['Datorkomponenter', 'Datorlåda / Chassi', 'Server'],
-
+            ],
+            'monitor': [
+                ['Bildskärm', 'Gaming'],
+                ['Bildskärm', 'Standard 15 - 25"'],
+                ['Bildskärm', 'Standard 26 - 27"'],
+                ['Bildskärm', 'Standard 28" och större']
             ]};
 
         request(productUrl, function (error, response, body) {
