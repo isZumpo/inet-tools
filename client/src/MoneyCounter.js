@@ -18,7 +18,7 @@ class MoneyCounter extends Component {
     render() {
         return (
             <div className="container">
-                <div className="col-xs-6">
+                <div className="col-xs-6 col-xs-offset-3">
                     <MoneyCounterItem type="1" onChange={this.onItemChange}/>
                     <MoneyCounterItem type="2"  onChange={this.onItemChange}/>
                     <MoneyCounterItem type="5" onChange={this.onItemChange}/>
@@ -29,9 +29,9 @@ class MoneyCounter extends Component {
                     <MoneyCounterItem type="200" onChange={this.onItemChange}/>
                     <MoneyCounterItem type="500" onChange={this.onItemChange}/>
                     <MoneyCounterItem type="1000" onChange={this.onItemChange}/>
+                    {this.getTotal()}
                 </div>
 
-                {this.getTotal()}
             </div>
         );
     }
@@ -47,7 +47,10 @@ class MoneyCounter extends Component {
         for(var item in this.state.items) {
             total += this.state.items[item];
         }
-        return(<h1>{total}</h1>)
+        if(total == 0) {
+            return <h1 className="text-center"></h1>
+        }
+        return(<h1 className="text-center">{total}kr</h1>)
     }
 }
 
