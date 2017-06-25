@@ -47,7 +47,7 @@ class MoneyCounter extends Component {
         for(var item in this.state.items) {
             total += this.state.items[item];
         }
-        if(total == 0) {
+        if(total === 0) {
             return <h1 className="text-center"></h1>
         }
         return(<h1 className="text-center">{total}kr</h1>)

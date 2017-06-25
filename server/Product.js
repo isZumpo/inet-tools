@@ -6,6 +6,7 @@ class Product {
         this.values = undefined;
         this.keywords = undefined;
         this.loaded = false;
+        this.price = undefined;
         this.url = url;
     }
 
@@ -43,6 +44,10 @@ class Product {
 
     isLoaded() {
         return this.loaded;
+    }
+
+    setPrice(price) {
+        this.price = price;
     }
 
 

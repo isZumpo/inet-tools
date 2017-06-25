@@ -99,6 +99,9 @@ class ShoppingFactory {
                 });
                 product.setValues(values);
 
+                //Set price of product
+                product.setPrice($('.product-price .active-price').text());
+
                 //Get breadcrumbs/keywords for product
                 let keywords = [];
                 $('.breadcrumb li a span').each(function (index) {
