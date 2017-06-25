@@ -10,31 +10,13 @@ class CartAnalyzer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            printers: [],
-            searchResults: [],
+            shoppingCart: {
+                products: []
+            }
         };
-        // this.search = this.search.bind(this);
+        this.search = this.search.bind(this);
+        this.renderShoppingCart = this.renderShoppingCart.bind(this);
     }
-
-    componentDidMount() {
-        let self = this;
-        axios.get('http://localhost:8080/api/cartanalyzer')
-            .then(function (response) {
-                self.setState({printers: response.data});
-                console.log(response);
-                self.setState({shoppingcart: response.data})
-                for(let i in response.data) {
-                    searchIndex.addDoc(response.data[i]);
-                }
-
-
-
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    }
-
     search(event) {
         let id;
         //Check if id is correct
@@ -52,7 +34,7 @@ class CartAnalyzer extends Component {
         let self = this;
         axios.get('http://localhost:8080/api/cartanalyzer?cartId=' + id)
             .then(function (response) {
-                console.log(response.data);
+                self.setState({shoppingCart: response.data});
             })
             .catch(function (error) {
                 console.log(error);
@@ -69,12 +51,18 @@ class CartAnalyzer extends Component {
                         <FormGroup >
                             <FormControl bsSize="large" type="text" placeholder="Sök efter kundvagn" onChange={this.search} />
                         </FormGroup>
+                        {this.renderShoppingCart()}
                     </div>
-                    <div className="row col-xs-12" style={{margin: "20px", minHeight: "200px", padding:"0px", borderRadius: "3px"}}>
-                    </div>
+                    <div className="row col-xs-12" style={{margin: "20px", minHeight: "200px", padding:"0px", borderRadius: "3px"}}></div>
                 </div>
             </div>
         );
+    }
+
+    renderShoppingCart() {
+        return this.state.shoppingCart.products.map((product, index) => (
+            <div>{product.name} : {product.type}</div>
+        ));
     }
 
 }
