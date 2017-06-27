@@ -16,6 +16,7 @@ class CartAnalyzer extends Component {
         };
         this.search = this.search.bind(this);
         this.renderShoppingCart = this.renderShoppingCart.bind(this);
+        this.getShoppingItemsOfType = this.getShoppingItemsOfType.bind(this);
     }
     search(event) {
         let id;
@@ -51,7 +52,7 @@ class CartAnalyzer extends Component {
                         <FormGroup >
                             <FormControl bsSize="large" type="text" placeholder="Sök efter kundvagn" onChange={this.search} />
                         </FormGroup>
-                        {this.renderShoppingCart()}
+                        {this.renderShoppingItemsOfType('cpu')}
                     </div>
                     <div className="row col-xs-12" style={{margin: "20px", minHeight: "200px", padding:"0px", borderRadius: "3px"}}></div>
                 </div>
@@ -61,6 +62,22 @@ class CartAnalyzer extends Component {
 
     renderShoppingCart() {
         return this.state.shoppingCart.products.map((product, index) => (
+            <div>{product.name} : {product.type}</div>
+        ));
+    }
+
+    getShoppingItemsOfType(type) {
+        let shoppingItems = [];
+        this.state.shoppingCart.products.forEach(function (product) {
+            if(product.type === type) {
+                shoppingItems.push(product);
+            }
+        });
+        return shoppingItems;
+    }
+
+    renderShoppingItemsOfType(type) {
+        return this.getShoppingItemsOfType(type).map((product, index) => (
             <div>{product.name} : {product.type}</div>
         ));
     }
