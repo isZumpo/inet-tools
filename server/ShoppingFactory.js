@@ -104,8 +104,12 @@ class ShoppingFactory {
                 });
                 product.setValues(values);
 
-                //Set price of product
-                product.setPrice($('.product-price .active-price').text());
+                //Set price of product, using regex to just get number with kr
+                product.setPrice($('.product-prices .product-price .active-price').text().match(/[0-9][0-9-/\s/g-kr]+/g)[0]);
+
+                //Set image of product
+                console.log(response.body);
+                product.setImage($('.img-responsive .center-block').attr('src'));
 
                 //Get breadcrumbs/keywords for product
                 let keywords = [];

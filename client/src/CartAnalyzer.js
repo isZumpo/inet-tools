@@ -35,6 +35,7 @@ class CartAnalyzer extends Component {
         let self = this;
         axios.get('http://localhost:8080/api/cartanalyzer?cartId=' + id)
             .then(function (response) {
+                console.log(response.data);
                 self.setState({shoppingCart: response.data});
             })
             .catch(function (error) {

@@ -8,6 +8,7 @@ class Product {
         this.loaded = false;
         this.price = undefined;
         this.url = url;
+        this.image = undefined;
     }
 
     getType() {
@@ -48,6 +49,10 @@ class Product {
 
     setPrice(price) {
         this.price = price;
+    }
+
+    setImage(image) {
+        this.image = image;
     }
 
 
