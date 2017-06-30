@@ -6,6 +6,7 @@ class ShoppingCart {
     constructor(url) {
         this.products = [];
         this.name = undefined;
+        this.id = undefined;
         this.ready = false;
         this.url = url;
     }

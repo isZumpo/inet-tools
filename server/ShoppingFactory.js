@@ -24,8 +24,9 @@ class ShoppingFactory {
                     let productUrl = "https://www.inet.se" + $(this).find('.ellipsis').attr('href');
                     shoppingCart.addProduct(ShoppingFactory.createProduct(productUrl));
                 });
+                shoppingCart.id = (/visa\/(\d+)/g).exec(cartUrl)[1];
+                shoppingCart.setReady();
             }
-            shoppingCart.setReady();
         });
 
 
