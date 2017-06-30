@@ -53,7 +53,7 @@ class CartAnalyzer extends Component {
                         <FormGroup >
                             <FormControl bsSize="large" type="text" placeholder="Sök efter kundvagn" onChange={this.search} />
                         </FormGroup>
-                        {this.renderShoppingItemsOfType('cpu')}
+                        {this.renderShoppingCart()}
                     </div>
                     <div className="row col-xs-12" style={{margin: "20px", minHeight: "200px", padding:"0px", borderRadius: "3px"}}></div>
                 </div>
@@ -63,7 +63,8 @@ class CartAnalyzer extends Component {
 
     renderShoppingCart() {
         return this.state.shoppingCart.products.map((product, index) => (
-            <div>{product.name} : {product.type}</div>
+            <div>{product.name} : {product.type}
+                <img src={product.image} alt=""/></div>
         ));
     }
 
@@ -79,7 +80,9 @@ class CartAnalyzer extends Component {
 
     renderShoppingItemsOfType(type) {
         return this.getShoppingItemsOfType(type).map((product, index) => (
-            <div>{product.name} : {product.type}</div>
+            <div>{product.name} : {product.type}
+                <img src={product.image} alt=""/></div>
+            
         ));
     }
 

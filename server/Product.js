@@ -2,6 +2,7 @@ class Product {
 
     constructor(url) {
         this.name = undefined;
+        this.id = undefined;
         this.type = undefined;
         this.values = undefined;
         this.keywords = undefined;
@@ -53,6 +54,10 @@ class Product {
 
     setImage(image) {
         this.image = image;
+    }
+
+    setId(id) {
+        this.id = id;
     }
 
 

@@ -97,6 +97,9 @@ class ShoppingFactory {
                 //Set product name
                 product.setName($('.product-header .ellipsis').text());
 
+                //Set product id using regex to get number from url
+                product.setId((/produkt\/(\d+)/g).exec(productUrl)[1]);
+
                 //Set description info about product
                 let values = [];
                 $('.product-tab-specs .row').each(function (index) {
@@ -108,7 +111,9 @@ class ShoppingFactory {
                 product.setPrice($('.product-prices .product-price .active-price').text().match(/[0-9][0-9-/\s/g-kr]+/g)[0]);
 
                 //Set image of product
-                product.setImage($('.img-responsive .center-block').attr('src'));
+                // console.log(response.body);
+                product.setImage($('img.img-responsive.center-block').attr('src'));
+                console.log($('img.img-responsive.center-block').html());
 
                 //Get breadcrumbs/keywords for product
                 let keywords = [];
