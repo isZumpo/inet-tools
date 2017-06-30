@@ -10,18 +10,6 @@ class ShoppingCart {
         this.url = url;
     }
 
-     getProducts() {
-        return this.products;
-    }
-
-    getName() {
-        return this.name;
-    }
-
-    setName(name) {
-        this.name = name;
-    }
-
     addProduct(product) {
         this.products.push(product);
     }

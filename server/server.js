@@ -68,8 +68,8 @@ apiRouter.get('/cartanalyzer', function(req, res) {
     let shoppingCart = ShoppingFactory.createShoppingCart(cartUrl);
     let refreshIntervalId = setInterval(function () {
         if(shoppingCart.isLoaded()) {
-            shoppingCart.getProducts().forEach(function (product) {
-                console.log(product.getName() + ' : ' + product.getType());
+            shoppingCart.products.forEach(function (product) {
+                console.log(product.name + ' : ' + product.type);
             });
             res.json(shoppingCart);
             clearInterval(refreshIntervalId);

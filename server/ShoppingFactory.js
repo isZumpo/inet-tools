@@ -95,25 +95,23 @@ class ShoppingFactory {
                 let $ = cheerio.load(response.body);
 
                 //Set product name
-                product.setName($('.product-header .ellipsis').text());
+                product.name = $('.product-header .ellipsis').text();
 
                 //Set product id using regex to get number from url
-                product.setId((/produkt\/(\d+)/g).exec(productUrl)[1]);
+                product.id = (/produkt\/(\d+)/g).exec(productUrl)[1];
 
                 //Set description info about product
                 let values = [];
                 $('.product-tab-specs .row').each(function (index) {
                     values.push({key: $(this).find('th').text(), value: $(this).find('td').text()});
                 });
-                product.setValues(values);
+                product.values = values;
 
                 //Set price of product, using regex to just get number with kr
-                product.setPrice($('.product-prices .product-price .active-price').text().match(/[0-9][0-9-/\s/g-kr]+/g)[0]);
+                product.price = $('.product-prices .product-price .active-price').text().match(/[0-9][0-9-/\s/g-kr]+/g)[0];
 
                 //Set image of product
-                // console.log(response.body);
-                product.setImage($('img.img-responsive.center-block').attr('src'));
-                console.log($('img.img-responsive.center-block').html());
+                product.image = $('img.img-responsive.center-block').attr('src');
 
                 //Get breadcrumbs/keywords for product
                 let keywords = [];
@@ -133,7 +131,7 @@ class ShoppingFactory {
 
                             //Found a match
                             if(j === productTagIndications[key][i].length - 1) {
-                                product.setType(key);
+                                product.type = key;
                             }
                         }
 
