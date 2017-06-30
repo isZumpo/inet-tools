@@ -108,7 +108,6 @@ class ShoppingFactory {
                 product.setPrice($('.product-prices .product-price .active-price').text().match(/[0-9][0-9-/\s/g-kr]+/g)[0]);
 
                 //Set image of product
-                console.log(response.body);
                 product.setImage($('.img-responsive .center-block').attr('src'));
 
                 //Get breadcrumbs/keywords for product
