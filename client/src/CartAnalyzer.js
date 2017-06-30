@@ -4,8 +4,6 @@ import axios from 'axios';
 import FormControl from 'react-bootstrap/lib/FormControl';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 
-
-var searchIndex;
 class CartAnalyzer extends Component {
     constructor(props) {
         super(props);
@@ -63,7 +61,7 @@ class CartAnalyzer extends Component {
 
     renderShoppingCart() {
         return this.state.shoppingCart.products.map((product, index) => (
-            <div>{product.name} : {product.type}
+            <div key={product.id}>{product.name} : {product.type}
                 <img src={product.image} alt=""/></div>
         ));
     }
