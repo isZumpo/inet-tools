@@ -7,7 +7,6 @@ import FormGroup from 'react-bootstrap/lib/FormGroup';
 import FontAwesome from 'react-fontawesome';
 
 
-var searchIndex;
 class InkFinder extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +14,7 @@ class InkFinder extends Component {
             printers: [],
             searchResults: [],
         };
-        searchIndex = elasticlunr(function () {
+        this.searchIndex = elasticlunr(function () {
             this.addField('title');
             this.setRef('id');
         })
@@ -30,7 +29,7 @@ class InkFinder extends Component {
                 console.log(response);
                 self.setState({shoppingcart: response.data})
                 for(let i in response.data) {
-                    searchIndex.addDoc(response.data[i]);
+                    self.searchIndex.addDoc(response.data[i]);
                 }
 
 
@@ -44,7 +43,7 @@ class InkFinder extends Component {
     search(event) {
         let searchString = event.target.value;
         let search = [];
-        searchIndex.search(searchString, {expand: true}).map((item) => (
+        this.searchIndex.search(searchString, {expand: true}).map((item) => (
             search.push(parseInt(item.ref))
         ));
         this.setState({searchResults: search});
