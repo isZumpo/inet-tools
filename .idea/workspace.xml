@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c164dca-cafe-4a7f-b85e-909ed4a70e24" name="Default" comment="Created a PrinterFactory and added environment variable for cors">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/client/build/static/js/main.9b749f57.js.map" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/client/build/static/js/main.d4d5afbb.js.map" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/client/build/static/js/main.d4d5afbb.js" afterPath="$PROJECT_DIR$/server/client/build/static/js/main.9b749f57.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/client/build/asset-manifest.json" afterPath="$PROJECT_DIR$/server/client/build/asset-manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/client/build/index.html" afterPath="$PROJECT_DIR$/server/client/build/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,16 +33,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/client/build/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="testshoppingcarts.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testshoppingcarts.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -49,14 +43,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state relative-caret-position="1836">
+              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding>
                 <element signature="e#305#350#0" expanded="true" />
+                <marker date="1499034763706" expanded="true" signature="2390:2417" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="58" column="49" lean-forward="false" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,8 +70,15 @@
         <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1499033598626" expanded="true" signature="323:3159" ph="{...}" />
+                <marker date="1499033598626" expanded="true" signature="348:644" ph="{...}" />
+                <marker date="1499033598626" expanded="true" signature="514:591" ph="{...}" />
+                <marker date="1499033598626" expanded="true" signature="1504:2395" ph="{...}" />
+                <marker date="1499033598626" expanded="true" signature="1583:1904" ph="{...}" />
+                <marker date="1499033598626" expanded="true" signature="1681:1878" ph="&lt;div/&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/client/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -85,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/server/PrinterFactory.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+              <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -107,8 +119,10 @@
         <entry file="file://$PROJECT_DIR$/server/Printer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-              <folding />
+              <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              <folding>
+                <marker date="1499031895919" expanded="true" signature="14:170" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/server/Product.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -302,6 +316,66 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inet-reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inet-reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main.9b749f57.js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inet-reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inet-reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -792,7 +866,7 @@
       <workItem from="1498427140805" duration="1502000" />
       <workItem from="1498598153805" duration="2181000" />
       <workItem from="1499021235119" duration="1673000" />
-      <workItem from="1499026626612" duration="8130000" />
+      <workItem from="1499026626612" duration="8412000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1494886632739</created>
@@ -1085,11 +1159,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90926000" />
+    <option name="totallyTimeSpent" value="91208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1102,7 +1176,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32719395" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27843988" sideWeight="0.49786553" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27843988" sideWeight="0.49786553" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1418,14 +1492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="58" column="49" lean-forward="false" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/CartAnalyzer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1447,7 +1513,7 @@
     <entry file="file://$PROJECT_DIR$/server/Product.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -1455,15 +1521,17 @@
     <entry file="file://$PROJECT_DIR$/server/Printer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding />
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding>
+            <marker date="1499031895919" expanded="true" signature="14:170" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1479,8 +1547,15 @@
     <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1499033598626" expanded="true" signature="323:3159" ph="{...}" />
+            <marker date="1499033598626" expanded="true" signature="348:644" ph="{...}" />
+            <marker date="1499033598626" expanded="true" signature="514:591" ph="{...}" />
+            <marker date="1499033598626" expanded="true" signature="1504:2395" ph="{...}" />
+            <marker date="1499033598626" expanded="true" signature="1583:1904" ph="{...}" />
+            <marker date="1499033598626" expanded="true" signature="1681:1878" ph="&lt;div/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1497,18 +1572,27 @@
     <entry file="file://$PROJECT_DIR$/server/PrinterFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="1836">
+          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding>
             <element signature="e#305#350#0" expanded="true" />
+            <marker date="1499034763706" expanded="true" signature="2390:2417" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="58" column="49" lean-forward="false" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
