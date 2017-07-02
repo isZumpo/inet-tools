@@ -9,7 +9,6 @@ import InkFinder from './InkFinder'
 import CartAnalyzer from './CartAnalyzer'
 
 
-
 const Application = () => (
     <div>
         <Navigation />

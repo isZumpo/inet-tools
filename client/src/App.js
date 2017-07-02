@@ -31,7 +31,7 @@ class App extends Component {
         let self = this;
         self.setState({showModal: false});
         self.setState({modalSelect: 0});
-        axios.get('http://localhost:8080/api/shoppingcart?cartId=10402169')
+        axios.get(process.env.REACT_APP_API_URL + 'shoppingcart?cartId=10402169')
             .then(function (response) {
                 self.setState({shoppingcart: response.data})
             })
@@ -56,7 +56,7 @@ class App extends Component {
             }
         }
         let self = this;
-        axios.get('http://localhost:8080/api/shoppingcart?cartId=' + id)
+        axios.get(process.env.REACT_APP_API_URL + 'shoppingcart?cartId=' + id)
             .then(function (response) {
                 console.log({shoppingcart: response.data});
                 self.setState({modalSelect: 0});

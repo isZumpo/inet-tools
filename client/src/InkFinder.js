@@ -23,7 +23,7 @@ class InkFinder extends Component {
 
     componentDidMount() {
         let self = this;
-        axios.get('http://localhost:8080/api/inkfinder')
+        axios.get(process.env.REACT_APP_API_URL + 'inkfinder')
             .then(function (response) {
                 self.setState({printers: response.data});
                 console.log(response);
