@@ -81,11 +81,11 @@ apiRouter.get('/cartanalyzer', function(req, res) {
 //Serve root
 clientRouter.get('/', function (req, res) {
     // res.sendFile(__dirname , '..', 'client', 'app.css');
-    res.sendFile(path.resolve('../client/build/index.html'));
+    res.sendFile(path.resolve('client/build/index.html'));
 });
 
 //Dirty way to save statics
-clientRouter.get(/^(.+)$/, function(req, res) { res.sendfile((path.resolve('../client/build/' + req.params[0])))});
+clientRouter.get(/^(.+)$/, function(req, res) { res.sendfile((path.resolve('client/build/' + req.params[0])))});
 
 
 
