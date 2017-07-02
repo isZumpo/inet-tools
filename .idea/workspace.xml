@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c164dca-cafe-4a7f-b85e-909ed4a70e24" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/.env.development" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/.env.production" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/client/build/asset-manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/client/build/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/client/build/static/css/main.0f367ae6.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/client/build/static/css/main.0f367ae6.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/client/build/static/js/main.b8e81e82.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/client/build/static/js/main.b8e81e82.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/App.js" afterPath="$PROJECT_DIR$/client/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/CartAnalyzer.js" afterPath="$PROJECT_DIR$/client/src/CartAnalyzer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/InkFinder.js" afterPath="$PROJECT_DIR$/client/src/InkFinder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/index.js" afterPath="$PROJECT_DIR$/client/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testshoppingcarts.txt" afterPath="$PROJECT_DIR$/testshoppingcarts.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,11 +29,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/client/build/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testshoppingcarts.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testshoppingcarts.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -139,6 +138,7 @@
         <option value="$PROJECT_DIR$/client/src/InkFinder.js" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/CartAnalyzer.js" />
+        <option value="$PROJECT_DIR$/testshoppingcarts.txt" />
       </list>
     </option>
   </component>
@@ -698,7 +698,7 @@
       <workItem from="1498427140805" duration="1502000" />
       <workItem from="1498598153805" duration="2181000" />
       <workItem from="1499021235119" duration="1673000" />
-      <workItem from="1499026626612" duration="3894000" />
+      <workItem from="1499026626612" duration="4165000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1494886632739</created>
@@ -966,15 +966,22 @@
       <option name="project" value="LOCAL" />
       <updated>1498600036989</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added enviroment variables that gets added on runtime and build">
+      <created>1499030560402</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1499030560402</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86690000" />
+    <option name="totallyTimeSpent" value="86961000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -991,7 +998,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17270789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17270789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1016,7 +1023,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added modal" />
     <MESSAGE value="Now possible to show and hide modal" />
     <MESSAGE value="Now possible to move between items in modal. Ctrl+c also does this" />
     <MESSAGE value="Added keyboard input support for moving left and right in modal. Also escape for closing the modal." />
@@ -1041,7 +1047,8 @@
     <MESSAGE value="Added comments to function" />
     <MESSAGE value="Added monitors to type filter" />
     <MESSAGE value="Added a method to filter different types of parts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a method to filter different types of parts" />
+    <MESSAGE value="Added enviroment variables that gets added on runtime and build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added enviroment variables that gets added on runtime and build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1378,18 +1385,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testshoppingcarts.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/client/build/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testshoppingcarts.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
           <folding />
         </state>
       </provider>
