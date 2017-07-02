@@ -28,7 +28,7 @@ var clientRouter = express.Router();              // get an instance of the expr
 
 //Allow localhost:3000 to access api
 apiRouter.use(cors({origin: 'http://localhost:3000'}));
-apiRouter.use(cors({origin: 'inet.hampuscarlsson.se'}));
+apiRouter.use(cors({origin: 'http://inet.hampuscarlsson.se'}));
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 apiRouter.get('/shoppingcart', function(req, res) {
