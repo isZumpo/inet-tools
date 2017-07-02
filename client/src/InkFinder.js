@@ -15,7 +15,7 @@ class InkFinder extends Component {
             searchResults: [],
         };
         this.searchIndex = elasticlunr(function () {
-            this.addField('title');
+            this.addField('name');
             this.setRef('id');
         })
         this.search = this.search.bind(this);
@@ -54,7 +54,7 @@ class InkFinder extends Component {
         if(this.state.searchResults.length > 0) {
             return this.state.searchResults.slice(0, 15).map((item, index) => (
                 <div className={"stripe-" + index % 2}>
-                    <a href={this.state.shoppingcart[item].url} target="_blank"><div>{this.state.shoppingcart[item].title}</div></a>
+                    <a href={this.state.shoppingcart[item].inkUrl} target="_blank"><div>{this.state.shoppingcart[item].name}</div></a>
                 </div>
             ));
         } else {

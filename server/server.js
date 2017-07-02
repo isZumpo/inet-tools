@@ -6,12 +6,12 @@ var cheerio = require('cheerio');
 var path = require('path');
 var cors = require('cors');
 
-import CartAnalyzer from './CartAnalyzer'
+import PrinterFactory from './PrinterFactory'
 import ShoppingFactory from './ShoppingFactory'
 
 
 //Printers
-var printers = [];
+let printers = [];
 
 
 // configure app to use bodyParser()
@@ -27,8 +27,11 @@ var apiRouter = express.Router();              // get an instance of the express
 var clientRouter = express.Router();              // get an instance of the express Router
 
 //Allow localhost:3000 to access api
-apiRouter.use(cors({origin: 'http://localhost:3000'}));
-apiRouter.use(cors({origin: 'http://inet.hampuscarlsson.se'}));
+if(process.env.ENV_TYPE === 'PRODUCTION') {
+    apiRouter.use(cors({origin: 'http://inet.hampuscarlsson.se'}));
+} else {
+    apiRouter.use(cors({origin: 'http://localhost:3000'}));
+}
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 apiRouter.get('/shoppingcart', function(req, res) {
@@ -60,6 +63,7 @@ apiRouter.get('/shoppingcart', function(req, res) {
 });
 
 apiRouter.get('/inkfinder', function(req, res) {
+    console.log(printers);
     res.json(printers);
 });
 
@@ -97,39 +101,9 @@ clientRouter.get(/^(.+)$/, function(req, res) { res.sendfile((path.resolve('clie
 app.use('/api', apiRouter);
 app.use('/', clientRouter);
 
+
 // GET PRINTER DATA
-let findPrinterBrandsUrl = "https://www.inet.se/kategori/209/blackpatroner";
-let printerBrands = [];
-request(findPrinterBrandsUrl, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-        let $ = cheerio.load(response.body);
-
-        //Get all printer brands
-        $('#consumables-brands option').each(function (index) {
-            let value = $(this).val();
-            // value.replaceAll(' ', '%20');
-            if (value != "") {
-                printerBrands.push({value: value});
-            }
-        });
-
-        for (let printerBrand in printerBrands) {
-            request('https://www.inet.se/kategori/209/blackpatroner?selectedBrand=' + printerBrands[printerBrand].value + '&search=', function (error, response, body) {
-                let $ = cheerio.load(response.body);
-                if (!error && response.statusCode == 200) {
-                    $('.consumables-printer-list a').each(function (index) {
-                        printers.push({
-                            title: $(this).html(),
-                            brand: printerBrands[printerBrand].value,
-                            url: 'https://www.inet.se/kategori/209/blackpatroner' + $(this).attr('href'),
-                            id: printers.length
-                        });
-                    });
-                }
-            });
-        }
-    }
-});
+printers = PrinterFactory.createPrinterList();
 
 // START THE SERVER
 // =============================================================================
