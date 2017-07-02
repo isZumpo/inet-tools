@@ -4,7 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/server/ShoppingFactory.js" line="91" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c164dca-cafe-4a7f-b85e-909ed4a70e24" name="Default" comment="">
+    <list default="true" id="7c164dca-cafe-4a7f-b85e-909ed4a70e24" name="Default" comment="Created a PrinterFactory and added environment variable for cors">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +52,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+            <state relative-caret-position="553">
+              <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding>
                 <element signature="e#305#350#0" expanded="true" />
               </folding>
@@ -63,8 +64,8 @@
       <file leaf-file-name="InkFinder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="62" lean-forward="true" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+            <state relative-caret-position="272">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,8 +84,8 @@
       <file leaf-file-name="PrinterFactory.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/PrinterFactory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-246">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="459">
+              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -93,7 +94,7 @@
       <file leaf-file-name="ShoppingFactory.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/ShoppingFactory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="136">
               <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -133,7 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modal</find>
       <find>Shopping Cart</find>
       <find>id</find>
       <find>for</find>
@@ -163,6 +163,7 @@
       <find>axios</find>
       <find>url</find>
       <find>console.lo</find>
+      <find>eb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -791,7 +792,7 @@
       <workItem from="1498427140805" duration="1502000" />
       <workItem from="1498598153805" duration="2181000" />
       <workItem from="1499021235119" duration="1673000" />
-      <workItem from="1499026626612" duration="7227000" />
+      <workItem from="1499026626612" duration="8130000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1494886632739</created>
@@ -1084,7 +1085,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90023000" />
+    <option name="totallyTimeSpent" value="90926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1467,32 +1468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/PrinterFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/ShoppingFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="62" lean-forward="true" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testshoppingcarts.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1501,10 +1476,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/ShoppingFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/PrinterFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+        <state relative-caret-position="553">
+          <caret line="108" column="0" lean-forward="true" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding>
             <element signature="e#305#350#0" expanded="true" />
           </folding>

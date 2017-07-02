@@ -63,7 +63,6 @@ apiRouter.get('/shoppingcart', function(req, res) {
 });
 
 apiRouter.get('/inkfinder', function(req, res) {
-    console.log(process.env.ENV_TYPE);
     res.json(printers);
 });
 
@@ -105,5 +104,7 @@ printers = PrinterFactory.createPrinterList();
 
 //Start server
 app.listen(port);
+
+console.log(process.env.ENV_TYPE);
 
 console.log('Magic happens on port ' + port);
