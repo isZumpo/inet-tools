@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c164dca-cafe-4a7f-b85e-909ed4a70e24" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/client/build/service-worker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/client/build/static/js/main.75522cce.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/client/build/static/js/main.75522cce.js.map" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/client/build/static/js/main.9b749f57.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server/client/build/static/js/main.9b749f57.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/client/build/asset-manifest.json" afterPath="$PROJECT_DIR$/server/client/build/asset-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/client/build/index.html" afterPath="$PROJECT_DIR$/server/client/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/client/build/static/css/main.0f367ae6.css.map" afterPath="$PROJECT_DIR$/server/client/build/static/css/main.0f367ae6.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/.env.production" afterPath="$PROJECT_DIR$/client/.env.production" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,11 +42,19 @@
       <file leaf-file-name="InkFinder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="60" />
-              <folding>
-                <marker date="1499035279253" expanded="true" signature="323:3159" ph="{...}" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1292">
+              <caret line="77" column="35" lean-forward="true" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/client/.env.production">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="49" />
+              <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -99,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.75522cce.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.75522cce.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/client/build/static/js/main.75522cce.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="223">
@@ -209,8 +209,8 @@
         <option value="$PROJECT_DIR$/server/PrinterFactory.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/client/src/InkFinder.js" />
-        <option value="$PROJECT_DIR$/client/.env.production" />
         <option value="$PROJECT_DIR$/client/package.json" />
+        <option value="$PROJECT_DIR$/client/.env.production" />
       </list>
     </option>
   </component>
@@ -848,7 +848,7 @@
       <workItem from="1498427140805" duration="1502000" />
       <workItem from="1498598153805" duration="2181000" />
       <workItem from="1499021235119" duration="1673000" />
-      <workItem from="1499026626612" duration="9473000" />
+      <workItem from="1499026626612" duration="10090000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1494886632739</created>
@@ -1144,15 +1144,22 @@
       <option name="project" value="LOCAL" />
       <updated>1499035063785</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Updated build">
+      <created>1499036129508</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1499036129508</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92269000" />
+    <option name="totallyTimeSpent" value="92886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1169,7 +1176,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17270789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17270789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1194,7 +1201,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ctrl+C will now auto select next id" />
     <MESSAGE value="Added some kind of search for printers on client" />
     <MESSAGE value="Added a better search by using elasticlunr" />
     <MESSAGE value="Improved search filter configuration" />
@@ -1219,7 +1225,8 @@
     <MESSAGE value="Added http to url" />
     <MESSAGE value="Created a PrinterFactory and added environment variable for cors" />
     <MESSAGE value="Built new client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Built new client" />
+    <MESSAGE value="Updated build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1493,16 +1500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <element signature="e#305#350#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -1515,24 +1512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="60" lean-forward="false" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="60" />
-          <folding>
-            <marker date="1499035279253" expanded="true" signature="323:3159" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/.env.development">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1561,14 +1540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/.env.production">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/npm-debug.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1589,6 +1560,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="0" column="179406" lean-forward="false" selection-start-line="0" selection-start-column="179406" selection-end-line="0" selection-end-column="179406" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/.env.production">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/.env.development">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="44" lean-forward="false" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="77" column="35" lean-forward="true" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
           <folding />
         </state>
       </provider>
