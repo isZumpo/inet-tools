@@ -63,7 +63,7 @@ apiRouter.get('/shoppingcart', function(req, res) {
 });
 
 apiRouter.get('/inkfinder', function(req, res) {
-    console.log(printers);
+    console.log(process.env.ENV_TYPE);
     res.json(printers);
 });
 
@@ -85,27 +85,25 @@ apiRouter.get('/cartanalyzer', function(req, res) {
 
 //Serve root
 clientRouter.get('/', function (req, res) {
-    // res.sendFile(__dirname , '..', 'client', 'app.css');
     res.sendFile(path.resolve('client/build/index.html'));
 });
 
-//Dirty way to save statics
+//Dirty way to serve static files
 clientRouter.get(/^(.+)$/, function(req, res) { res.sendfile((path.resolve('client/build/' + req.params[0])))});
 
-
-
-// more routes for our API will happen here
-
-// REGISTER OUR ROUTES -------------------------------
-// all of our routes will be prefixed with /api
+//Api and client url
 app.use('/api', apiRouter);
 app.use('/', clientRouter);
 
 
-// GET PRINTER DATA
-printers = PrinterFactory.createPrinterList();
 
 // START THE SERVER
 // =============================================================================
+
+// Get printer data
+printers = PrinterFactory.createPrinterList();
+
+//Start server
 app.listen(port);
+
 console.log('Magic happens on port ' + port);

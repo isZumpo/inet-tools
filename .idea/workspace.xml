@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c164dca-cafe-4a7f-b85e-909ed4a70e24" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/Printer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/PrinterFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/InkFinder.js" afterPath="$PROJECT_DIR$/client/src/InkFinder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,18 +41,18 @@
       <file leaf-file-name="testshoppingcarts.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testshoppingcarts.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-790">
-              <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="39" />
+            <state relative-caret-position="442">
+              <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
               <folding>
                 <element signature="e#305#350#0" expanded="true" />
               </folding>
@@ -64,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InkFinder.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InkFinder.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -137,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modalSelect</find>
       <find>modal</find>
       <find>Shopping Cart</find>
       <find>id</find>
@@ -167,6 +162,7 @@
       <find>app</find>
       <find>axios</find>
       <find>url</find>
+      <find>console.lo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,8 +212,8 @@
         <option value="$PROJECT_DIR$/testshoppingcarts.txt" />
         <option value="$PROJECT_DIR$/server/Printer.js" />
         <option value="$PROJECT_DIR$/server/PrinterFactory.js" />
-        <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/client/src/InkFinder.js" />
+        <option value="$PROJECT_DIR$/server/server.js" />
       </list>
     </option>
   </component>
@@ -795,7 +791,7 @@
       <workItem from="1498427140805" duration="1502000" />
       <workItem from="1498598153805" duration="2181000" />
       <workItem from="1499021235119" duration="1673000" />
-      <workItem from="1499026626612" duration="6977000" />
+      <workItem from="1499026626612" duration="7227000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1494886632739</created>
@@ -1077,11 +1073,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499031025569</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Created a PrinterFactory and added environment variable for cors">
+      <created>1499033656684</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1499033656684</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89773000" />
+    <option name="totallyTimeSpent" value="90023000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1127,7 +1130,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Now possible to move between items in modal. Ctrl+c also does this" />
     <MESSAGE value="Added keyboard input support for moving left and right in modal. Also escape for closing the modal." />
     <MESSAGE value="Ctrl+C will now auto select next id" />
     <MESSAGE value="Added some kind of search for printers on client" />
@@ -1152,7 +1154,8 @@
     <MESSAGE value="Added a method to filter different types of parts" />
     <MESSAGE value="Added enviroment variables that gets added on runtime and build" />
     <MESSAGE value="Added http to url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added http to url" />
+    <MESSAGE value="Created a PrinterFactory and added environment variable for cors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a PrinterFactory and added environment variable for cors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1464,14 +1467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testshoppingcarts.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/PrinterFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-246">
@@ -1490,21 +1485,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-790">
-          <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="39" />
-          <folding>
-            <element signature="e#305#350#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/InkFinder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="31" column="62" lean-forward="true" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testshoppingcarts.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+          <folding>
+            <element signature="e#305#350#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
