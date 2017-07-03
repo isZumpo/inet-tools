@@ -25,6 +25,7 @@ class ShoppingFactory {
                     shoppingCart.addProduct(ShoppingFactory.createProduct(productUrl));
                 });
                 shoppingCart.id = (/visa\/(\d+)/g).exec(cartUrl)[1];
+                shoppingCart.totalPrice = $('.cart-sum .active-price').html();
                 shoppingCart.setReady();
             }
         });

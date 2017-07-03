@@ -9,6 +9,7 @@ class ShoppingCart {
         this.id = undefined;
         this.ready = false;
         this.url = url;
+        this.totalPrice = undefined;
     }
 
     addProduct(product) {
