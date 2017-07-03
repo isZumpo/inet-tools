@@ -31,7 +31,7 @@ class CartAnalyzer extends Component {
             return;
         }
         let self = this;
-        axios.get(process.env.REACT_APP_API_URL + 'cartanalyzer?cartId=' + id)
+        axios.get(process.env.REACT_APP_API_URL + 'shoppingcart?cartId=' + id)
             .then(function (response) {
                 console.log(response.data);
                 self.setState({shoppingCart: response.data});

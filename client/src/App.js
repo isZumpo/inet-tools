@@ -68,13 +68,13 @@ class App extends Component {
     }
 
     cloneToggle(event) {
-        if(this.state.shoppingcart.items.length > 0) {
+        if(this.state.shoppingcart.products.length > 0) {
             this.setState({showModal: !this.state.showModal});
         }
     }
 
     cloneInc(event) {
-        if(this.state.modalSelect < this.state.shoppingcart.items.length - 1) {
+        if(this.state.modalSelect < this.state.shoppingcart.products.length - 1) {
             this.setState({modalSelect: this.state.modalSelect + 1});
             document.getElementById("copyinput").select();
         }
@@ -115,7 +115,7 @@ class App extends Component {
                             <FormControl //Should be readonly
                                 type="text"
                                 id="copyinput"
-                                value={this.state.shoppingcart.items[this.state.modalSelect].id}
+                                value={this.state.shoppingcart.products[this.state.modalSelect].id}
                                 placeholder="Produktnr"
                                 //onChange={(e)=>{e.target.select()}}
                                 onFocus={(e)=>{e.target.select()}}
@@ -164,12 +164,12 @@ class App extends Component {
      * @returns {Array}
      */
     getShoppingItems(props) {
-        if(props && props.shoppingcart && props.shoppingcart.items) {
-            return props.shoppingcart.items.map((item, index) => (
+        if(props && props.shoppingcart && props.shoppingcart.products) {
+            return props.shoppingcart.products.map((item, index) => (
                 <div className="col-xs-6 col-sm-4 col-lg-3">
                     <div key={item.id} className="shoppingcart-item col-xs-12" id={this.isCloneSelected(index)}>
-                        <img className="shoppingcart-item-image" src={item.imageUrl} alt=""/>
-                        <h4>{item.title}
+                        <img className="shoppingcart-item-image" src={item.image} alt=""/>
+                        <h4>{item.name}
                             ({item.price})</h4>
                     </div>
                 </div>))

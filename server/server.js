@@ -33,42 +33,12 @@ if(process.env.ENV_TYPE === 'PRODUCTION') {
     apiRouter.use(cors({origin: 'http://localhost:3000'}));
 }
 
-// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-apiRouter.get('/shoppingcart', function(req, res) {
-
-    let cartUrl = 'https://www.inet.se/kundvagn/visa/' + req.query.cartId + '/';
-    request(cartUrl, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            let $ = cheerio.load(response.body);
-            let cart = {
-                cartURL: cartUrl,
-                totalPrice: $('.cart-sum .active-price').html(),
-                items: []
-            };
-            $('.cart-content .cart-item').each(function (index) {
-                let item = {};
-                item.url = $(this).find('.ellipsis').attr('href');
-                item.id = item.url.split('/')[2];
-                item.imageUrl = "https://inetimg.se/img/110x83/" + item.id + "_0.jpg";
-                item.title =  $(this).find('.ellipsis').html();
-                item.price = $(this).find('.product-price .active-price').html()
-                cart.items.push(item);
-            });
-            res.json(cart);
-        }else {
-            res.status(500).send('Could not find shoppingcart');
-        }
-    })
-
-});
-
 apiRouter.get('/inkfinder', function(req, res) {
     res.json(printers);
 });
 
-apiRouter.get('/cartanalyzer', function(req, res) {
+apiRouter.get('/shoppingcart', function(req, res) {
     let cartUrl = 'https://www.inet.se/kundvagn/visa/' + req.query.cartId + '/';
-    // let analyzer = new CartAnalyzer();
     let shoppingCart = ShoppingFactory.createShoppingCart(cartUrl);
     let refreshIntervalId = setInterval(function () {
         if(shoppingCart.isLoaded()) {
