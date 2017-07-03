@@ -1,6 +1,3 @@
-import Product from './Product.js';
-
-
 class ShoppingCart {
 
     constructor(url) {
