@@ -1,5 +1,7 @@
 https://www.inet.se/kundvagn/visa/10486367/
 https://www.inet.se/kundvagn/visa/10486672/
 
+Många grejer:
+https://www.inet.se/kundvagn/visa/10519870/
 
 git subtree push --prefix server heroku master

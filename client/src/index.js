@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import CartCloner from './CartCloner';
 import Navigation from './Navigation'
 import './index.css';
 import { BrowserRouter, Route } from 'react-router-dom'
@@ -12,7 +13,7 @@ import CartAnalyzer from './CartAnalyzer'
 const Application = () => (
     <div>
         <Navigation />
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={CartCloner} />
         <Route path="/moneycounter" component={MoneyCounter} />
         <Route path="/inkfinder" component={InkFinder} />
         <Route path="/cartanalyzer" component={CartAnalyzer} />
